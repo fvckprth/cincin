@@ -6,11 +6,10 @@ interface UnmuteButtonProps {
 
 const UnmuteButton: React.FC<UnmuteButtonProps> = ({ handleMuteUnmute }) => {
     return (
-        <div className="z-10 pr-4 cursor-pointer" onClick={handleMuteUnmute}>
+        <div onClick={handleMuteUnmute}>
             <img
                 src='/unmute.png'
                 alt='Unmute'
-                style={{ backgroundColor: 'blue' }}
             />
         </div>
     );
