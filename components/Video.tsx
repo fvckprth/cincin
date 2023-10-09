@@ -42,11 +42,13 @@ export default function BackgroundVideo() {
                     position: "absolute",
                     top: 0,
                     left: 0,
+                    width: "100%",
+                    height: "100%",
                     zIndex: 1
                 }}
                 onClick={handleMuteUnmute}
             >
-                {isMuted ? 'Unmute' : 'Mute'}
+                {isMuted ? ' ' : ' '}
             </button>
         </div>
     );
