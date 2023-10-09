@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '(Cin Cin) - NYC',
+  title: 'Cin Cin - NYC',
   description: 'Bringing Italian Aperitivo to New York City',
   themeColor: '#00375F',
   icons: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png'
   },
   openGraph: {
-    title: '(Cin Cin) - NYC',
+    title: 'Cin Cin - NYC',
     description: 'Bringing Italian Aperitivo to New York City',
     url: 'https://ciccin.nyc',
     images: [
