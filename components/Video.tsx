@@ -35,7 +35,7 @@ export default function BackgroundVideo() {
                     height: "100%",
                     zIndex: -1
                 }}
-                volume={isMuted ? 0 : 1}
+                muted={isMuted}
             />
             <button 
                 style={{
