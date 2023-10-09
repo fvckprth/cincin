@@ -16,7 +16,7 @@ export default function BackgroundVideo() {
     };
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <MuxPlayer
                 ref={playerRef}
                 playbackId="aHuPzAYEtHo3QyPa01G9YcIttmSRUUvF6007rh00Op5oZM"
@@ -44,7 +44,7 @@ export default function BackgroundVideo() {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    cursor: "pointer",
+                    cursor: "url('/unmute.png'), 12px",
                     backgroundColor: 'transparent'
                 }}
                 onClick={handleMuteUnmute}
