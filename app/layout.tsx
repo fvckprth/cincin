@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: 'Cin Cin - NYC',
+  title: '(Cin Cin) - NYC',
   description: 'Bringing Italian Aperitivo to New York City',
   themeColor: '#00375F',
   icons: {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png'
   },
   openGraph: {
-    title: 'Cin Cin - NYC',
+    title: '(Cin Cin) - NYC',
     description: 'Bringing Italian Aperitivo to New York City',
     url: 'https://ciccin.nyc',
     images: [
@@ -27,14 +28,32 @@ export const metadata: Metadata = {
   },
 }
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <>
+      <Head>
+      <title>(Cin Cin) - NYC</title>
+        <meta name="description" content="Bringing Italian Aperitivo to New York City" />
+        <meta property="og:url" content="https://cincin.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="(Cin Cin) - NYC" />
+        <meta property="og:description" content="Bringing Italian Aperitivo to New York City" />
+        <meta property="og:image" content="https://cincin-jvwqbqab2-fvckprth.vercel.app/cincin-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="cincin.vercel.app" />
+        <meta property="twitter:url" content="https://cincin.vercel.app" />
+        <meta name="twitter:title" content="(Cin Cin) - NYC" />
+        <meta name="twitter:description" content="Bringing Italian Aperitivo to New York City" />
+        <meta name="twitter:image" content="https://cincin-jvwqbqab2-fvckprth.vercel.app/cincin-og.png" />
+      </Head>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+  </>
   )
 }
