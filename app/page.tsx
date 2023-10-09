@@ -6,7 +6,7 @@ import CTA from '@/components/CTA'
 
 export default function Home() {
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen overflow-hidden'>
       <Video />
       <div className='flex flex-col justify-around items-center h-full'>
         <Logo />
