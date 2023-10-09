@@ -12,8 +12,6 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png'
   },
   openGraph: {
-    title: '(Cin Cin) - NYC',
-    description: 'Bringing Italian Aperitivo to New York City',
     url: 'https://ciccin.nyc',
     images: [
       {
