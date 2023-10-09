@@ -37,6 +37,8 @@ export default function RootLayout({
       <Head>
       <title>(Cin Cin) - NYC</title>
         <meta name="description" content="Bringing Italian Aperitivo to New York City" />
+        <meta name="apple-mobile-web-app-title" content="(Cin Cin) - NYC" />
+        <meta name="description" content="Bringing Italian Aperitivo to New York City" />
         <meta property="og:url" content="https://cincin.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="(Cin Cin) - NYC" />
