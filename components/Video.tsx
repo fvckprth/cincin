@@ -5,13 +5,22 @@ import MuxPlayer from '@mux/mux-player-react';
 
 export default function BackgroundVideo() {
     const [isMuted, setIsMuted] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(true);
     const playerRef = useRef(null);
 
-    const handleMuteUnmute = () => {
+    const handlePlayPauseMuteUnmute = () => {
         const current = playerRef.current;
         if (current) {
-            (current as any).muted = !(current as any).muted;
-            setIsMuted(!isMuted);
+            if (isPlaying) {
+                (current as any).pause();
+                (current as any).muted = true;
+                setIsMuted(true);
+            } else {
+                (current as any).play();
+                (current as any).muted = false;
+                setIsMuted(false);
+            }
+            setIsPlaying(!isPlaying);
         }
     };
 
@@ -19,7 +28,7 @@ export default function BackgroundVideo() {
         <div className='overflow-hidden'>
             <MuxPlayer
                 ref={playerRef}
-                playbackId="aHuPzAYEtHo3QyPa01G9YcIttmSRUUvF6007rh00Op5oZM"
+                playbackId="YDkyajWe6c3MZkXl56mpgKLod98Y00ZUtIGTuWMLo00w4"
                 metadata={{
                     video_title: "Italy MotoGP VHS Footage",
                 }}
@@ -46,9 +55,9 @@ export default function BackgroundVideo() {
                     height: "100%",
                     zIndex: 1
                 }}
-                onClick={handleMuteUnmute}
+                onClick={handlePlayPauseMuteUnmute}
             >
-                {isMuted ? ' ' : ' '}
+                {isPlaying ? ' ' : '  '}
             </button>
         </div>
     );
