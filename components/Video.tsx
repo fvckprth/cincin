@@ -7,7 +7,7 @@ export default function BackgroundVideo() {
     const [isMuted, setIsMuted] = useState(true);
     const playerRef = useRef(null);
 
-    const handleMuteUnmute: React.MouseEventHandler<HTMLDivElement> = () => {
+    const handleMuteUnmute: React.MouseEventHandler<HTMLButtonElement> = () => {
         const current = playerRef.current;
         if (current) {
             (current as any).volume = isMuted ? 1 : 0;
@@ -37,18 +37,17 @@ export default function BackgroundVideo() {
                 }}
                 volume={isMuted ? 0 : 1}
             />
-            <div 
+            <button 
                 style={{
                     position: "absolute",
                     top: 0,
                     left: 0,
-                    width: "100%",
-                    height: "100%",
-                    cursor: "url('/unmute.png'), 12px",
-                    backgroundColor: 'transparent'
+                    zIndex: 1
                 }}
                 onClick={handleMuteUnmute}
-            />
+            >
+                {isMuted ? 'Unmute' : 'Mute'}
+            </button>
         </div>
     );
 }
