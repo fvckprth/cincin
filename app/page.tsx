@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className='w-full h-screen'>
       <Video />
-      <div className='flex flex-col justify-around h-full'>
+      <div className='flex flex-col justify-around items-center h-full'>
         <Logo />
         <Hero />
         <CTA />
