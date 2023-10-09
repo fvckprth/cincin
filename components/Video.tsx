@@ -7,10 +7,10 @@ export default function BackgroundVideo() {
     const [isMuted, setIsMuted] = useState(true);
     const playerRef = useRef(null);
 
-    const handleMuteUnmute: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const handleMuteUnmute = () => {
         const current = playerRef.current;
         if (current) {
-            (current as any).volume = isMuted ? 1 : 0;
+            (current as any).muted = !(current as any).muted;
             setIsMuted(!isMuted);
         }
     };
