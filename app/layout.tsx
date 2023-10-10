@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: '(Cin Cin) - Bringing Italian Aperitivo to New York City',
+  title: '(Cin Cin) Bringing Italian Aperitivo to New York City',
   description: 'Bringing Italian Aperitivo to New York City. Italian Aperitivo is a social ritual that combines refreshing drinks with delectable bites, creating a relaxed and convivial atmosphere.',
   themeColor: '#00375F',
   icons: {
