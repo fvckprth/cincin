@@ -7,6 +7,9 @@ export default function BackgroundVideo() {
     const [isMuted, setIsMuted] = useState(true);
     const [isPlaying, setIsPlaying] = useState(true);
     const playerRef = useRef(null);
+    const customCursor = {
+        cursor: `url(${process.env.PUBLIC_URL + '/pointer.png'}), auto`
+    };
 
     const handlePlayPauseMuteUnmute = () => {
         const current = playerRef.current;
@@ -25,7 +28,7 @@ export default function BackgroundVideo() {
     };
 
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden custom-cursor'>
             <MuxPlayer
                 ref={playerRef}
                 playbackId="YDkyajWe6c3MZkXl56mpgKLod98Y00ZUtIGTuWMLo00w4"
@@ -46,19 +49,22 @@ export default function BackgroundVideo() {
                 }}
                 muted={isMuted}
             />
-            <button 
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    zIndex: 1
-                }}
-                onClick={handlePlayPauseMuteUnmute}
-            >
-                {isPlaying ? ' ' : '  '}
-            </button>
+            <div>
+                <button 
+                    className="custom-cursor"
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        zIndex: 1
+                    }}
+                    onClick={handlePlayPauseMuteUnmute}
+                >
+                    {isPlaying ? ' ' : '  '}
+                </button>
+            </div>
         </div>
     );
 }
