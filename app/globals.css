@@ -33,3 +33,7 @@ html, body {
 .custom-cursor {
   cursor: url('/pointer.png'), auto;
 }
+
+.external-link-cursor {
+  cursor: url('/external-link.png'), auto;
+}
